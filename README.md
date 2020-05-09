@@ -8,7 +8,7 @@ this process. Through this Web application we were able to use the crud operatio
 
 In this java program we are trying to make a web application api using MVC (Model , View , Controller) pattern. Components like a model, service, repo, and controller all help make a fully working web application api. The model helps the web to interact with the database’s name and columns. In the repo, there are the methods that all can serve to either create, insert, update, or delete the data. Once created, the service acts as a middle layer in order to connect the repo to the main controller. Finally in the controller, you can call these methods which run the correct operation. Also, in the controller, there are certain annotations that are needed in order to run the code and view the data from different platforms. Now, once compiled and ran, the data in the database can be manipulated through any platform.
 
-Test Cases;
+Test Cases::
 
 1. Inserting new data to DB
 
