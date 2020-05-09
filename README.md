@@ -12,27 +12,39 @@ Test Cases;
 
 1. Inserting new data to DB
 
-curl -X POST -H "Content-Type: application/json" http://localhost:8080/saveperson -d "{\"id\":1,\"firstName\":\"john123\",\"lastName\":\"rayamajhi\",\"dob\":\"2004-09-19\",\"gender\":\"m\"}"
+curl -X POST -H "Content-Type: application/json" http://localhost:8080/saveperson -d 
+"{\"id\":1,\"firstName\":\"john123\",\"lastName\":\"rayamajhi\",\"dob\":\"2004-09-19\",\"gender\":\"m\"}"
+
+Output:
 {"id":121,"firstName":"john123","lastName":"rayamajhi","dob":"2004-09-18","gender":"m"}
- curl -X POST -H "Content-Type: application/json" http://localhost:8080/saveperson -d "{\"id\":2,\"firstName\":\"john12\",\"lastName\":\"rayamajhi\",\"dob\":\"2004-09-19\",\"gender\":\"m\"}"
+
+ curl -X POST -H "Content-Type: application/json" http://localhost:8080/saveperson -d 
+"{\"id\":2,\"firstName\":\"john12\",\"lastName\":\"rayamajhi\",\"dob\":\"2004-09-19\",\"gender\":\"m\"}"
+
+Output:
 {"id":122,"firstName":"john12","lastName":"rayamajhi","dob":"2004-09-18","gender":"m"}
 
 
 2. Select from DB for specific ID
 
 curl http://localhost:8080/getperson/122
+
+Output:
 {"id":122,"firstName":"john12","lastName":"rayamajhi","dob":"2004-09-18","gender":"m"}
 
 
 3. Delete from DB for specific ID
- 
+
 curl -X DELETE  http://localhost:8080/deleteperson/122
 
+Output:[] or blank
 
 
 
 4. Selecting all from the DB
 
 curl http://localhost:8080/persons
+
+Output:
 [{"id":120,"firstName":"John2","lastName":"Doe","dob":"2002-11-18","gender":"m"},{"id":121,"firstName":"john123","lastName":"rayamajhi","dob":"2004-09-18","gender":"m"}]
 
